@@ -4,8 +4,8 @@ const randomNum = Math.round(Math.random()*100);
 console.log(`Don't Tell AnyOne : ${randomNum}`); // random num shower;
 
 // remain guesses
-let guessRemain = 10;
-const previourGuesses = [""];
+let guessRemain = 1;
+const previourGuesses = [];
 // userInput Element selected;
 const userInputEle = document.getElementById("guessField");
 
@@ -28,32 +28,36 @@ const isValidInput = function (input) {
 // check result ; 
 const resChecker = function(userInputEle){
   let userInput = userInputEle.value;
-
+  const messageToUser = document.querySelector(".lowOrHi")
 //   message to user;
  if(guessRemain > 0 ){
      
   if(userInput == randomNum){
-    alert("you won start New Game (reload tab)");
+   messageToUser.innerText =  "you won start New Game (reload tab)";
     guessRemain--;
-    console.log(guessRemain);
+    submitBtn.disabled = true
+     
     
     guessShower()
   }
+ 
   else if(userInput > randomNum){
-    alert("too high");
+    messageToUser.innerText = "too high";
     guessRemain--;
     guessShower()
   }
   else if (userInput < randomNum){
-    alert("too low");
+    messageToUser.innerText ="too low";
     guessRemain--;
     guessShower()
   }
 
   
 }
-else if (guessRemain == 0){
-    alert("you lost Start New by Reloading Page")
+else if (guessRemain == 1  ){
+  messageToUser.innerText ="you lost Start New by Reloading Page , num was "+ randomNum;
+    submitBtn.disabled = true
+    guessRemain--;
     guessShower()
 }
 }
@@ -77,7 +81,7 @@ const previourGuessesShower = () => {
     
         
        
-       ele.innerText = previourGuesses[previourGuesses.length - 1];
+       ele.innerText = previourGuesses;
       
     
    }
@@ -91,3 +95,4 @@ submitBtn.addEventListener("click",() => {
         userInputEle.value = "";
     }
 } );
+
