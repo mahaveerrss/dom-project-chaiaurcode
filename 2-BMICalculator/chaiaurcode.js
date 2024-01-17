@@ -25,8 +25,17 @@ form.addEventListener('submit',function (e){
        alert('Enter Valid Values')
     }
     else{
-  
-       result.innerHTML = `<h3>Your BMI is ${BMI.toFixed(1) }</h3>`
+      
+      if(BMI > 0 && BMI < 18.6  ){
+          result.innerHTML = `<h3>Your BMI is Under Weight ${BMI.toFixed(1) }</h3>`
+      }
+      else if(BMI >= 18.6 && BMI <=24.9){
+         result.innerHTML = `<h3>Your BMI is Normal Range ${BMI.toFixed(1) }</h3>`
+     }
+     else  if(BMI > 24.9 && BMI <=200) {
+      result.innerHTML = `<h3>Your BMI is Overweight  ${BMI.toFixed(1) }</h3>`
+  }
+
     }
    }
 })
