@@ -88,5 +88,6 @@ submitBtn.addEventListener("click",() => {
         resChecker(userInputEle)
         previourGuesses.push(userInputEle.value)
         previourGuessesShower()
+        userInputEle.value = "";
     }
 } );
