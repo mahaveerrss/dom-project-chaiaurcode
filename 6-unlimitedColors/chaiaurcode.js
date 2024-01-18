@@ -8,7 +8,7 @@ const starter = function(){
     let randomColor = '#'
     for (let index = 0; index < 6; index++) {
         
-        randomColor += hex[Math.round(Math.random()*hex.length)]
+        randomColor += hex[Math.floor(Math.random()*hex.length)]
         
     }
       
