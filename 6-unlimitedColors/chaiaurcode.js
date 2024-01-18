@@ -15,16 +15,20 @@ const starter = function(){
  
 
   document.querySelector("body").style.backgroundColor = `${randomColor}`;
-   console.log(randomColor);
+    
    
 
 }
 
 startBtn.addEventListener('click',()=>{
-    starterInterval = setInterval(starter, 500);
+    if(!starterInterval){
+         starterInterval = setInterval(starter, 500);
+    }
+   
 });
 
 stopBtn.addEventListener('click',() => {
-  clearInterval(starterInterval)
+  clearInterval(starterInterval);
+  starterInterval = null;
 }
 )
