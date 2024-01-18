@@ -4,10 +4,18 @@ const stopBtn = document.querySelector("#stop")
 let starterInterval ;
 
 const starter = function(){
-    const randomColor = Math.round(Math.random()*999999)
+    const hex = '0123456789ABCDEF'
+    let randomColor = '#'
+    for (let index = 0; index < 6; index++) {
+        
+        randomColor += hex[Math.round(Math.random()*hex.length)]
+        
+    }
+      
  
 
-  document.querySelector("body").style.backgroundColor = `#${randomColor}`;
+  document.querySelector("body").style.backgroundColor = `${randomColor}`;
+   console.log(randomColor);
    
 
 }
