@@ -3,6 +3,13 @@ const cursor = document.querySelector('.cursor');
 
 const words = ['Love', 'Jhakaas', 'mast', 'dhinchak', 'Weird'];
 
-function type() {}
+ 
 
+function type() {
+  
+}
+
+ 
 function erase() {}
+
+ 

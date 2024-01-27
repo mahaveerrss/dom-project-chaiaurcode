@@ -1,5 +1,10 @@
 body {
   background: rgb(17, 17, 17);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vmin;
 }
 
 .header-content {
@@ -14,6 +19,12 @@ body {
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.btn:hover{
+  background-color: #181717;
+  color: #62d316;
+  outline: 1px solid #62d316;
 }
 
 /* JavaScript */
@@ -29,5 +40,6 @@ body {
 }
 
 img {
-  width: 900px;
+  width: 480px;
+  border-radius: 8px;
 }
