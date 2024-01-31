@@ -12,6 +12,8 @@ body {
 .container {
   text-align: center;
   margin: 0 auto;
+ 
+ 
 }
 
 h1 {
@@ -19,9 +21,11 @@ h1 {
   font-size: 4rem;
   font-family: 'Playfair Display SC', serif;
   transition: color 800ms ease-in-out;
+ 
 }
 h1:hover{
   color: rgb(253, 253, 56);
+  cursor: pointer;
 }
 
 p {
@@ -44,11 +48,19 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+  transition:   background 1s ease-in-out , color .5s ease-out;
+}
+
+button:hover{
+  background-color: white;
+  color: black;
 }
 
 /* JavaScript */
 div.cursor {
+ 
   position: absolute;
+  pointer-events: none;
   top: 0;
   left: 0;
   width: 25px;
@@ -57,5 +69,5 @@ div.cursor {
   background: yellow;
   border-radius: 50%;
   transition: color 2s ease-in-out;
-  animation: cursor 6s infinite alternate;
+   
 }

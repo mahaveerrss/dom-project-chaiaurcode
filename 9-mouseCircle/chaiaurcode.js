@@ -29,12 +29,10 @@ window.addEventListener('mousemove',(e) => {
  
  
  
- cursor.style.background  =  colors[randomColor]
-  
- console.log();
+ cursor.style.background  =  colors[randomColor];
+  // cursor.style.transform = `translateX(${e.clientX - elementWidth/2}px) translateY(${e.clientY - elementHeight/2} px)`;
+  cursor.style.transform = `translateX(${e.clientX - elementWidth/4}px) translateY(${e.clientY - elementHeight/4}px)  `;
  
-  cursor.style.transform = `translateX(${e.clientX - elementWidth/2}px) translateY(${e.clientY - elementHeight/2}px)`;
-  
    
 },false
 )
