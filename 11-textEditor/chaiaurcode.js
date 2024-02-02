@@ -41,7 +41,7 @@ buttons.forEach(element => {
             output.style = 'none'
         
             output.innerText =  inputValue 
-             output.style.fontStyle = 'capitalize'
+             output.style.textTransform = 'capitalize'
         
         }
         
